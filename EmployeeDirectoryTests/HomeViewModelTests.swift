@@ -112,9 +112,6 @@ final class HomeViewModelTests: XCTestCase {
         store.employees = anyEmployees(count: 999)
         sut.fetch()
 
-        store.employees = anyEmployees(count: 999)
-        sut.fetch()
-
         let status_two = try awaitPublisher(sut.$status)
         let unwrappedStatus_two = try XCTUnwrap(status_two)
 
