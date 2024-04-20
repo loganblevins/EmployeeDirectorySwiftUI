@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-// Test URL malformed data: https://REDACTED/employees_malformed.json
-// Test URL empty data: https://REDACTED/employees_empty.json
+// Test URL malformed data: https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json
+// Test URL empty data: https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json
 
 final class RemoteStore: DataStore {
     enum Endpoints: String {
-        case employees = "https://REDACTED/employees.json"
+        case employees = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
 
         var url: URL? {
             URL(string: rawValue)
